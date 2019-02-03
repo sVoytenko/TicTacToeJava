@@ -123,8 +123,8 @@ public class Game {
                     break;
                 }
 
-                if (this.movesLeft > 0) {
-                    //this.computerMove();
+                if (this.movesLeft > 0 && !this.isGameFinished) {
+                    this.computerMove();
                 }
             }
         }
@@ -156,8 +156,6 @@ public class Game {
                 break;
             }
         }
-
-        this.isGameFinished = isVictory;
 
         if (this.isGameFinished == true) {
             return;
