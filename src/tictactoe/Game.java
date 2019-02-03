@@ -84,10 +84,10 @@ public class Game {
 
         this.printTable();
 
-        this.checkWin(this.cellX);
+        this.checkWin(this.cellO);
 
         if (this.isGameFinished) {
-            System.err.println("Победил игрок!");
+            System.err.println("Победил компьютер!");
         }
     }
     // запускает игру
@@ -181,7 +181,7 @@ public class Game {
 
         int hMove = 0;
         for (int i = 0; i < this.gameBoard.length; i++) {
-            System.out.println(i + " " + hMove);
+
             if (this.gameBoard[i][hMove] != cellSymbol) {
                 crossVictory = false;
                 break;
